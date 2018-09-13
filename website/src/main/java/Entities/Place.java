@@ -4,15 +4,36 @@ import Utilities.Address;
 
 
 public abstract class Place {
-	String name,discreption,telphone;
+	int ID;
+	String name,discreption,telphone,photoURL;
 	Address address;
 	
-	public Place(String name, String discreption, String telphone, Address address) {
+
+	public Place(int iD, String name, String discreption, String telphone, String photoURL, Address address) {
+		ID = iD;
 		this.name = name;
 		this.discreption = discreption;
 		this.telphone = telphone;
+		this.photoURL = photoURL;
 		this.address = address;
 	}
+	
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		ID = iD;
+	}
+
+	public String getPhotoURL() {
+		return photoURL;
+	}
+
+	public void setPhotoURL(String photoURL) {
+		this.photoURL = photoURL;
+	}
+
 	public String getName() {
 		return name;
 	}
